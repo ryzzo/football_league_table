@@ -1,0 +1,16 @@
+{% extends "league_table/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="my-4">Add Match Stats</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ stats_form }}
+        <button class="btn btn-primary my-4" type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <p>{{ entry }}</p>
+</div>
+{% endblock %}

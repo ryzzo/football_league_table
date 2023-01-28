@@ -1,0 +1,17 @@
+{% extends "league_table/base.html" %}
+
+{% block content %}
+
+{% for stat in stats%}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td><img src="###">&nbsp;&nbsp; {{ stat.club }}</td>
+        <td>{{ stat.played }}</td>
+        <td>{{ stat.won }}</td>
+        <td>{{ stat.draw }}</td>
+        <td>{{ stat.losses }}</td>
+        <td>+{{ stat.goal_dif }}</td>
+        <td>{{ stat.points }}</td>
+</tr>
+{% endfor %}
+{% endblock %}
